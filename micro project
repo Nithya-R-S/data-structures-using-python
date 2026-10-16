@@ -1,0 +1,36 @@
+class Student:
+    def _init_(self, id, name, cgpa):
+        self.id = id
+        self.name = name
+        self.cgpa = cgpa
+
+    def display(self):
+        print(self.id, self.name, self.cgpa)
+
+
+# Create a list to store student details
+students = []
+
+# Add student details
+students.append(Student(101, "Arun", 8.5))
+students.append(Student(102, "Priya", 7.8))
+students.append(Student(103, "Rahul", 5.5))
+
+print("COLLEGE PLACEMENT MANAGEMENT SYSTEM")
+print("-----------------------------------")
+print("ID Name CGPA")
+
+# Display students
+for s in students:
+    s.display()
+
+# Check placement eligibility
+print("\nPLACEMENT ELIGIBILITY")
+
+for s in students:
+    print(s.name + ": ", end="")
+
+    if s.cgpa >= 6.0:
+        print("Eligible")
+    else:
+        print("Not Eligible")
